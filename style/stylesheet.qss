@@ -1,0 +1,9 @@
+
+
+err_trp[state = 'normal']{
+    color: green;
+}
+
+err_trp[state = 'err']{
+    color: red;
+}

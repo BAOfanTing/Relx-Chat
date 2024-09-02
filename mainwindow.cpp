@@ -17,13 +17,18 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    _login_dlg = new Login_Dialog();
+    _login_dlg = new Login_Dialog(this);
     setCentralWidget(_login_dlg);
-    _register_dlg = new Register_Dialog();
+    _register_dlg = new Register_Dialog(this);
 
     _login_dlg->show();
 
     connect(_login_dlg,&Login_Dialog::switchRegister,this,&MainWindow::slots_switch_register);
+
+    _login_dlg->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+    _register_dlg->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+
+
 }
 
 MainWindow::~MainWindow()
