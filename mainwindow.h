@@ -3,6 +3,7 @@
 
 #include "login_dialog.h"
 #include <QMainWindow>
+#include "register_dialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,5 +22,9 @@ public:
 private:
     Ui::MainWindow *ui;
     Login_Dialog *_login_dlg;
+    Register_Dialog * _register_dlg;
+
+public slots:
+    void slots_switch_register();
 };
 #endif // MAINWINDOW_H

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Login_Dialog</class>
- <widget class="QDialog" name="Login_Dialog">
+ <class>Register_Dialog</class>
+ <widget class="QDialog" name="Register_Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -31,27 +31,26 @@
 QLabel[name=&quot;title&quot;]{font:30px '黑体';}
 QLabel[name=&quot;lb&quot;]{font:18px '楷体';}
 QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
-
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="label_8">
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="res.qrc">:/res/no_cigerua.png</pixmap>
+      <pixmap resource="res.qrc">:/res/register_pic.png</pixmap>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <spacer name="horizontalSpacer_8">
+      <spacer name="horizontalSpacer_10">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -64,7 +63,7 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_3">
        <property name="text">
         <string>用户名:</string>
        </property>
@@ -96,7 +95,7 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_9">
+      <spacer name="horizontalSpacer_11">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -114,9 +113,9 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
      <item>
-      <spacer name="horizontalSpacer_3">
+      <spacer name="horizontalSpacer_14">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -129,9 +128,9 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>密码:</string>
+        <string>邮箱:</string>
        </property>
        <property name="name" stdset="0">
         <string>lb</string>
@@ -139,7 +138,7 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="le_password">
+      <widget class="QLineEdit" name="le_mailbox">
        <property name="minimumSize">
         <size>
          <width>160</width>
@@ -152,13 +151,16 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
          <height>25</height>
         </size>
        </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
        <property name="name" stdset="0">
         <string>le</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_4">
+      <spacer name="horizontalSpacer_15">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -176,9 +178,9 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
-      <spacer name="horizontalSpacer_7">
+      <spacer name="horizontalSpacer_12">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -191,9 +193,171 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_forget">
+      <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>忘记密码</string>
+        <string>密码:</string>
+       </property>
+       <property name="name" stdset="0">
+        <string>lb</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_password1">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="name" stdset="0">
+        <string>le</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_13">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <item>
+      <spacer name="horizontalSpacer_18">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>确认:</string>
+       </property>
+       <property name="name" stdset="0">
+        <string>lb</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_password2">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="name" stdset="0">
+        <string>le</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_19">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <spacer name="horizontalSpacer_16">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>验证码:</string>
+       </property>
+       <property name="name" stdset="0">
+        <string>lb</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_code">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="name" stdset="0">
+        <string>le</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_get_code">
+       <property name="text">
+        <string>获取</string>
        </property>
        <property name="name" stdset="0">
         <string>btn</string>
@@ -203,24 +367,11 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
      <item>
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_login">
+      <widget class="QPushButton" name="btn_ok">
        <property name="text">
-        <string>登录</string>
+        <string>确定</string>
        </property>
        <property name="name" stdset="0">
         <string>btn</string>
@@ -228,69 +379,17 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <spacer name="horizontalSpacer_5">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_register">
-       <property name="enabled">
-        <bool>true</bool>
+      <widget class="QPushButton" name="btn_cancel">
+       <property name="styleSheet">
+        <string notr="true">QPushButton { background-color: red; }</string>
        </property>
        <property name="text">
-        <string>注册</string>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="checked">
-        <bool>false</bool>
-       </property>
-       <property name="default">
-        <bool>false</bool>
+        <string>取消</string>
        </property>
        <property name="name" stdset="0">
         <string>btn</string>
        </property>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_6">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </item>

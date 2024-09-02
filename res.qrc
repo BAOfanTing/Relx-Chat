@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>res/cigerua.png</file>
         <file>res/no_cigerua.png</file>
+        <file>res/icon.svg</file>
+        <file>res/register_pic.png</file>
     </qresource>
 </RCC>
