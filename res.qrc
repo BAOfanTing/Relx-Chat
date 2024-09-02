@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/cigerua.png</file>
+        <file>res/no_cigerua.png</file>
+    </qresource>
+</RCC>
