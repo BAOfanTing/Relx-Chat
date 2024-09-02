@@ -16,6 +16,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    _login_dlg = new Login_Dialog();
+    setCentralWidget(_login_dlg);
+    _login_dlg->show();
 }
 
 MainWindow::~MainWindow()
