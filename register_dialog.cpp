@@ -23,3 +23,42 @@ Register_Dialog::~Register_Dialog()
 {
     delete ui;
 }
+
+// 当点击获取验证码按钮时触发的方法
+void Register_Dialog::on_btn_get_code_clicked()
+{
+    // 获取用户在邮件输入框中输入的内容
+    auto email = ui->le_mailbox->text();
+
+    // 定义一个正则表达式来验证邮箱地址格式
+    QRegularExpression regex(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
+    // 使用正则表达式检查邮箱地址是否匹配
+    bool match = regex.match(email).hasMatch();
+
+    if (match) {
+        // 如果邮箱地址格式正确，则发送 HTTP 请求以获取验证码
+        // 这里应当实现发送 HTTP 请求的逻辑，但此处仅做注释说明
+        // 发送http请求验真码
+    } else {
+        // 如果邮箱地址格式不正确，则提示用户
+        showTip("邮箱地址不正确", false);
+    }
+}
+
+// 显示提示信息的方法
+void Register_Dialog::showTip(QString str, bool b_ok)
+{
+    // 设置错误提示标签的状态属性
+    if (b_ok) {
+        // 如果 b_ok 为 true，设置状态为正常
+        ui->err_tip->setProperty("state", "normal");
+    } else {
+        // 如果 b_ok 为 false，设置状态为错误
+        ui->err_tip->setProperty("state", "err");
+    }
+    // 设置错误提示标签的文本为传入的字符串
+    ui->err_tip->setText(str);
+    // 调用全局函数 repolish 刷新错误提示标签的样式
+    repolish(ui->err_tip);
+}
+

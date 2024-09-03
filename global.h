@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <functional>
 #include "QStyle"
-
+#include <QRegularExpression>
 /**
  * @brief repolish 用于刷新样式
  */

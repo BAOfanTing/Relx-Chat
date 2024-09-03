@@ -48,7 +48,7 @@ QLineEdit[name = &quot;le&quot;]{border-radius:4px;border:1px solid black}
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="err_tip">
      <property name="text">
       <string>错误提示</string>
      </property>

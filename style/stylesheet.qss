@@ -1,9 +1,9 @@
 
 
-err_trp[state = 'normal']{
+#err_tip[state = 'normal']{
     color: green;
 }
 
-err_trp[state = 'err']{
+#err_tip[state = 'err']{
     color: red;
 }
