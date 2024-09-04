@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,13 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     global.cpp \
+    httpmanger.cpp \
     login_dialog.cpp \
     main.cpp \
     mainwindow.cpp \
     register_dialog.cpp
 
 HEADERS += \
+    Singleton.h \
     global.h \
+    httpmanger.h \
     login_dialog.h \
     mainwindow.h \
     register_dialog.h

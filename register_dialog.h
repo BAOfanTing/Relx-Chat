@@ -2,6 +2,7 @@
 #define REGISTER_DIALOG_H
 
 #include <QDialog>
+#include "global.h"
 
 namespace Ui {
 class Register_Dialog;
@@ -17,6 +18,7 @@ public:
 
 private slots:
     void on_btn_get_code_clicked();
+    void slot_regisiter_finish()
 
 private:
     Ui::Register_Dialog *ui;

@@ -1,6 +1,9 @@
 #include "register_dialog.h"
 #include "ui_register_dialog.h"
 #include "global.h"
+#include "httpmanger.h"
+
+
 // Register_Dialog 类的构造函数
 Register_Dialog::Register_Dialog(QWidget *parent)  // 接受父窗口指针作为参数
     : QDialog(parent),  // 调用基类 QDialog 的构造函数
@@ -17,6 +20,8 @@ Register_Dialog::Register_Dialog(QWidget *parent)  // 接受父窗口指针作�
 
     // 调用全局函数 repolish，刷新错误提示标签的样式
     repolish(ui->err_tip);
+    //接受httpmanager发出的信号
+    connect(HttpManager::GetInstance().get(),&HttpManager::sig_register_mod_finish,this,&Register_Dialog::slot_regisiter_mod_finish);
 }
 
 Register_Dialog::~Register_Dialog()
@@ -43,6 +48,24 @@ void Register_Dialog::on_btn_get_code_clicked()
         // 如果邮箱地址格式不正确，则提示用户
         showTip("邮箱地址不正确", false);
     }
+}
+
+void Register_Dialog::slot_regisiter_mod_finish(ReqID id, QString res, ErrorCodes err)
+{
+    if(err != ErrorCodes::SUCCESS){
+        showTip("json解析错误",false);
+        return;
+    }
+
+    //解析Json字符串,转换为QBytearray
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(res.toUtf8());
+    if(!jsonDoc.isObject()){
+        showTip("不是json对象",false);
+        return;
+    }
+    _handle[id](jsonDoc.object());
+    return;
+
 }
 
 // 显示提示信息的方法
